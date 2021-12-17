@@ -8,8 +8,9 @@ body {
 }
 .container {
   height: 100vh;
+  padding: 20px;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   flex-direction: column;
   background-image: url(../images/christmas-background-with-snowflakes-stars-design.jpg);
@@ -20,10 +21,6 @@ body {
   overflow: hidden;
 }
 .container h1 {
-  position: absolute;
-  top: 50px;
-  left: 50%;
-  transform: translateX(-50%);
   font-size: 100px;
 }
 .results {
@@ -32,6 +29,7 @@ body {
   align-items: center;
   gap: 50px;
   text-align: center;
+  padding-top: 100px;
 }
 .results h2 {
   font-size: 80px;
@@ -44,5 +42,21 @@ i {
 @keyframes snowfall {
   to {
     transform: translateY(105vh);
+  }
+}
+
+@media (max-width: 767px) {
+  .container {
+    justify-content: center;
+  }
+  .results {
+    padding-top: 50px;
+    gap: 30px;
+  }
+  .results h2 {
+    font-size: 40px;
+  }
+  .container h1 {
+    font-size: 30px;
   }
 }
