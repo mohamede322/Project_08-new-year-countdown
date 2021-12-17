@@ -23,10 +23,16 @@ function getDate() {
   minutes = Math.floor(totalSeconds / 60) % 60;
   seconds = Math.floor(totalSeconds) % 60;
 
-  daysLeft.innerHTML = days;
-  hoursLeft.innerHTML = hours;
-  minutesLeft.innerHTML = minutes;
-  secondsLeft.innerHTML = seconds;
+  days < 10 ? (daysLeft.innerHTML = `0${days}`) : (daysLeft.innerHTML = days);
+  hours < 10
+    ? (hoursLeft.innerHTML = `0${hours}`)
+    : (hoursLeft.innerHTML = hours);
+  minutes < 10
+    ? (minutesLeft.innerHTML = `0${minutes}`)
+    : (minutesLeft.innerHTML = minutes);
+  seconds < 10
+    ? (secondsLeft.innerHTML = `0${seconds}`)
+    : (secondsLeft.innerHTML = seconds);
 
   if (days === 0 && hours === 0 && minutes === 0 && seconds === 0) {
     result.innerHTML = `<h1> ITS 2022 <br> HAPPY NEW YEAR </h1>`;
