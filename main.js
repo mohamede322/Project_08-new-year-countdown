@@ -34,7 +34,7 @@ function getDate() {
     ? (secondsLeft.innerHTML = `0${seconds}`)
     : (secondsLeft.innerHTML = seconds);
 
-  if (days === 0 && hours === 0 && minutes === 0 && seconds === 0) {
+  if (days <= 0 && hours <= 0 && minutes <= 0 && seconds <= 0) {
     result.innerHTML = `<h1> ITS 2022 <br> HAPPY NEW YEAR </h1>`;
     header.style.display = "none";
   }
